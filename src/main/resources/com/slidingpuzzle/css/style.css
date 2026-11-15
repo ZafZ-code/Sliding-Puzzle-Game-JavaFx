@@ -1,0 +1,126 @@
+/* ===== Screens ===== */
+.root-pane {
+    -fx-background-color: linear-gradient(to bottom, #1f2b4d, #111833);
+}
+
+/* ===== Text ===== */
+.title {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.title-big {
+    -fx-font-size: 44px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.subtitle {
+    -fx-font-size: 15px;
+    -fx-text-fill: #aab4d4;
+}
+
+.section-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #cfd6ee;
+}
+
+.radio-button {
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+}
+
+/* ===== Menu card ===== */
+.card {
+    -fx-background-color: rgba(255, 255, 255, 0.08);
+    -fx-background-radius: 16;
+    -fx-padding: 18 24 18 24;
+}
+
+/* ===== Move counter and timer ===== */
+.stat {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: rgba(255, 255, 255, 0.10);
+    -fx-background-radius: 12;
+    -fx-padding: 8 18 8 18;
+}
+
+/* ===== Buttons ===== */
+.action-button {
+    -fx-background-color: rgba(255, 255, 255, 0.14);
+    -fx-background-radius: 12;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-padding: 10 28 10 28;
+    -fx-cursor: hand;
+}
+
+.action-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.26);
+}
+
+.primary-button {
+    -fx-background-color: linear-gradient(to bottom, #ff9a3c, #f2711c);
+    -fx-background-radius: 12;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-padding: 12 48 12 48;
+    -fx-cursor: hand;
+}
+
+.primary-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #ffab5c, #ff8230);
+}
+
+/* ===== Puzzle board ===== */
+.board {
+    -fx-background-color: rgba(0, 0, 0, 0.25);
+    -fx-background-radius: 20;
+    -fx-padding: 12;
+}
+
+/* A numbered tile that cannot move right now */
+.tile {
+    -fx-background-color: linear-gradient(to bottom, #3a5fa3, #2a4a86);
+    -fx-background-radius: 14;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* A numbered tile next to the empty cell (it can be clicked to move) */
+.tile-movable {
+    -fx-background-color: linear-gradient(to bottom, #5b8de6, #3a6bc4);
+    -fx-cursor: hand;
+}
+
+.tile-movable:hover {
+    -fx-background-color: linear-gradient(to bottom, #ffb35c, #f2811c);
+}
+
+/* Font size depends on the board size (the class is added in PuzzleController) */
+.tile-size-3 {
+    -fx-font-size: 40px;
+}
+
+.tile-size-4 {
+    -fx-font-size: 30px;
+}
+
+/* The empty cell: a dashed outline, clearly different from the tiles */
+.empty-slot {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-background-radius: 14;
+    -fx-border-color: rgba(255, 255, 255, 0.25);
+    -fx-border-radius: 14;
+    -fx-border-style: dashed;
+    -fx-border-width: 2;
+}

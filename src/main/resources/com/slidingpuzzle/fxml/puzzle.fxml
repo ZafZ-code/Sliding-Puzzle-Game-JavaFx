@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" spacing="16.0" styleClass="root-pane"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.slidingpuzzle.controllers.PuzzleController">
+
+   <padding>
+      <Insets top="24.0" right="24.0" bottom="24.0" left="24.0"/>
+   </padding>
+
+   <children>
+      <Label styleClass="title" text="Sliding Puzzle"/>
+      <Label fx:id="difficultyLabel" styleClass="subtitle" text="3 × 3  ·  Easy"/>
+
+      <HBox alignment="CENTER" spacing="16.0">
+         <children>
+            <Label fx:id="movesLabel" styleClass="stat" text="Moves: 0"/>
+            <Label fx:id="timeLabel" styleClass="stat" text="Time: 00:00"/>
+         </children>
+      </HBox>
+
+      <!-- The tiles are added to this grid from PuzzleController.renderBoard() -->
+      <GridPane fx:id="boardGrid" alignment="CENTER" hgap="8.0" vgap="8.0" styleClass="board"/>
+
+      <HBox alignment="CENTER" spacing="16.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleRestart" styleClass="action-button" text="Restart"/>
+            <Button mnemonicParsing="false" onAction="#handleMenu" styleClass="action-button" text="Main Menu"/>
+         </children>
+      </HBox>
+   </children>
+</VBox>

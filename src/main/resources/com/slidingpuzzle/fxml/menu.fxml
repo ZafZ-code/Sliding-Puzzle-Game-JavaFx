@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="22.0" styleClass="root-pane"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.slidingpuzzle.controllers.MenuController">
+
+   <!-- Must come before the radio buttons that refer to it with $difficultyGroup selecting a radio button deselect the other selections-->
+   <fx:define>
+      <ToggleGroup fx:id="difficultyGroup"/>
+   </fx:define>
+
+   <padding>
+      <Insets top="30.0" right="30.0" bottom="30.0" left="30.0"/>
+   </padding>
+
+   <children>
+      <Label styleClass="title-big" text="Sliding Puzzle"/>
+      <Label maxWidth="380.0" styleClass="subtitle" textAlignment="CENTER" wrapText="true"
+             text="Slide the tiles into the empty space until the numbers are in order."/>
+
+      <VBox alignment="CENTER_LEFT" maxWidth="300.0" spacing="14.0" styleClass="card">
+         <children>
+            <Label styleClass="section-label" text="Choose a difficulty"/>
+            <RadioButton fx:id="easyRadio" selected="true" text="3 × 3  ·  Easy" toggleGroup="$difficultyGroup"/>
+            <RadioButton fx:id="hardRadio" text="4 × 4  ·  Hard" toggleGroup="$difficultyGroup"/>
+         </children>
+      </VBox>
+
+      <Button mnemonicParsing="false" onAction="#handleStart" styleClass="primary-button" text="Start Game"/>
+      <Button mnemonicParsing="false" onAction="#handleExit" styleClass="action-button" text="Exit"/>
+   </children>
+</VBox>
